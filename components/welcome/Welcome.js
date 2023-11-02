@@ -1,4 +1,10 @@
-import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from "react-native";
+import { 
+    View,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    Image,
+    FlatList} from "react-native";
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import styles from "./welcome.style";
@@ -48,7 +54,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
                             }}
                         >
                             
-                            <Text style={styles.tab(activeJobType, item)}>{item}</Text>
+                            <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
 
                         </TouchableOpacity>
                     )}
