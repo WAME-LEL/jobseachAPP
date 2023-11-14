@@ -1,16 +1,9 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 
 import styles from "./popularjobcard.style";
-// import { checkImageURL } from "../../../../utils";
+import { checkImageURL } from "../../../../utils";
 
 const PopularJobCard = ({ item, selectedJob, handleCardPress }) => {
-  const checkImageURL = (url) => {
-    if(!url) return false
-    else {
-      const pattern = new RegExp('^https?:\\/\\/.+\\.(png|jpg|jpeg|bmp|gif|webp)&', 'i');
-      return pattern.test(url)
-    }
-  }
 
   return (
     <TouchableOpacity
