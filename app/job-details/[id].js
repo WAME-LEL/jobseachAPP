@@ -11,7 +11,7 @@ import {
 
 import useFetch from '../../hook/useFetch'
 import {COLORS, icons} from "../../constants"
-import {ScreenHeaderBtn} from "../../components"
+import {ScreenHeaderBtn, Company, About, Footer, Specifics, Tabs} from "../../components"
 
 const JobDetails = () => {
     const router = useRouter()
@@ -46,6 +46,7 @@ const JobDetails = () => {
                         iconUrl={icons.share}
                         dimension="60%"
                     />),
+                    headerTitle:"",
                     
                     
                 }}
@@ -54,6 +55,11 @@ const JobDetails = () => {
             <ScrollView showsVerticalScrollIndicator = {false}
                 refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh}/>}
             >
+                <Company/>
+                <About/>
+                <Footer/>
+                <Specifics/>
+                <Tabs/>
 
             </ScrollView>
         </SafeAreaView>
